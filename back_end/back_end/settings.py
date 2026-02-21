@@ -82,10 +82,14 @@ WSGI_APPLICATION = 'back_end.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
-    )
+    "default": {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lifechat_db',
+        'USER': 'admin',
+        'PASSWORD': '7688GeyHEErkx3Te8KOCNvXzLiaOlJMa',
+        'HOST': 'dpg-d6d0uqrh46gs73cqd34g-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
 
 
