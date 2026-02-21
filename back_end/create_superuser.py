@@ -3,6 +3,8 @@ import django
 
 from django.contrib.auth import get_user_model
 
+print("=== SCRIPT CREATE_SUPERUSER INICIADO ===")
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "back_end.settings")
 django.setup()
 
