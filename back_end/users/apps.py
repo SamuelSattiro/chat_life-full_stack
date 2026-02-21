@@ -1,11 +1,13 @@
 from django.apps import AppConfig
 import os
 
+print("🔥 users.apps carregado")
 
 class UsersConfig(AppConfig):
     name = "users"
 
     def ready(self):
+        print("🔥 ready() executado")
         if os.environ.get("CREATE_SUPERUSER") != "true":
             return
 
