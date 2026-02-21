@@ -85,7 +85,7 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lifechat_db',
-        'USER': 'admin',
+        'USER': 'lifechat_db_user',
         'PASSWORD': '7688GeyHEErkx3Te8KOCNvXzLiaOlJMa',
         'HOST': 'dpg-d6d0uqrh46gs73cqd34g-a.oregon-postgres.render.com',
         'PORT': '5432',
