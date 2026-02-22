@@ -162,7 +162,7 @@ const Search = () => {
           </div>
           <div className="mt-10">
             <h3 className="mb-4 text-center text-xl font-semibold text-indigo-400">Seguidores</h3>
-            {follower.length === 0 && <p className="text-sm text-gray-500">Nenhum seguido ainda</p>}
+            {follower.length === 0 && <p className="text-sm text-gray-500">Nenhum seguidor ainda</p>}
             <div className="flex flex-col gap-3">
               {follower.map((user) => (
                 <div key={user.id} className="flex items-center justify-between rounded-md bg-white/5 p-3">

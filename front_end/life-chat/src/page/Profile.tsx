@@ -91,9 +91,6 @@ const Profile = () => {
             <strong className="text-blue-300">Data de Nascimento:</strong> {formatDate(profile.birth_date)}
           </p>
           <p>
-            <strong className="text-blue-300">Portfólio:</strong> {profile.website}
-          </p>
-          <p>
             <strong className="text-blue-300">Cel:</strong> {formatPhone(profile.phone)}
           </p>
           <p>
