@@ -208,7 +208,7 @@ const SignUp = ({ onSwitch }: SignUpProps) => {
           <div>
             <button
               type="submit"
-              className="mt-6 flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              className="mt-6 flex w-full cursor-pointer justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 [&:hover]:bg-indigo-400"
             >
               Cadastrar
             </button>
