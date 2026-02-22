@@ -6,13 +6,17 @@ import { SquareX as Close } from 'lucide-react'
 import { Frown } from 'lucide-react'
 import api from '../services/api'
 
+interface Message {
+  username: string
+}
+
 const Messages = () => {
   const [visivel, setVisivel] = useState(false)
   const [mensagem, setMensagem] = useState(String)
   const [enviado, setEnviado] = useState(false)
   const [fechar, setFechar] = useState(false)
   const [temMensagem, setTemMensagem] = useState(true)
-  const [profile, setProfile] = useState<any>(null)
+  const [profile, setProfile] = useState<Message | null>(null)
 
   useEffect(() => {
     const fetchProfile = async () => {

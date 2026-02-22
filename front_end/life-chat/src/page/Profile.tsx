@@ -4,8 +4,22 @@ import api from '../services/api'
 import perfil from '../assets/images/perfil.jpg'
 import fundo from '../assets/images/imagem-fundo.png'
 
+interface IProfile {
+  username: string
+  full_name: string
+  avatar: string | null
+  cover_photo: string | null
+  birth_date: string | null
+  phone: string
+  profession: string
+  website: string
+  bio: string
+  following_count: number
+  followers_count: number
+}
+
 const Profile = () => {
-  const [profile, setProfile] = useState<any>(null)
+  const [profile, setProfile] = useState<IProfile | null>(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -27,7 +41,7 @@ const Profile = () => {
       .join(' ')
   }
 
-  const formatDate = (date: string) => {
+  const formatDate = (date: string | null | undefined) => {
     if (!date) return ''
     const [year, month, day] = date.split('-')
     return `${day}/${month}/${year}`

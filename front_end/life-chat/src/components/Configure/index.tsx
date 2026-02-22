@@ -48,9 +48,13 @@ const Configure = ({ onClose }: Props) => {
       })
 
       onClose?.()
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('ERRO NO SUBMIT:', error)
-      console.error('DETALHE DA API:', error?.response?.data)
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: unknown } }
+        console.error('DETALHE DA API:', apiError.response?.data)
+      }
+
       alert('Erro ao salvar perfil')
     }
   }

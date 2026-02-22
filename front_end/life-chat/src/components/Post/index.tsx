@@ -1,5 +1,4 @@
 import { SquareX as Close } from 'lucide-react'
-import perfil from '../../assets/images/perfil.jpg'
 import Botao from '../Botao'
 import { useState } from 'react'
 import api from '../../services/api'

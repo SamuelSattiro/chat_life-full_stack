@@ -12,12 +12,17 @@ import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 
+interface IProfileHeader {
+  avatar: string | null
+  username: string
+}
+
 type Props = {
   onAbrirConfig: () => void
 }
 
 const BarraLateral = ({ onAbrirConfig }: Props) => {
-  const [profile, setProfile] = useState<any>(null)
+  const [profile, setProfile] = useState<IProfileHeader | null>(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
