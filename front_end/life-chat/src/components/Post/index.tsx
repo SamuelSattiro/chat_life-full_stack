@@ -40,7 +40,6 @@ const Post = ({ onClose }: Props) => {
       setImagem(null)
       onClose?.()
       window.location.reload()
-      
     } catch (error) {
       console.error(error)
       alert('Erro ao criar post')
