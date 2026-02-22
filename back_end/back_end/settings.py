@@ -84,14 +84,22 @@ WSGI_APPLICATION = 'back_end.wsgi.application'
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lifechat_db',
-        'USER': 'lifechat_db_user',
-        'PASSWORD': '7688GeyHEErkx3Te8KOCNvXzLiaOlJMa',
-        'HOST': 'dpg-d6d0uqrh46gs73cqd34g-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+if not DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": os.getenv("DB_NAME"),
+            "USER": os.getenv("DB_USER"),
+            "PASSWORD": os.getenv("DB_PASSWORD"),
+            "HOST": os.getenv("DB_HOST"),
+            "PORT": os.getenv("DB_PORT", "5432"),
+        }
+    }
 
 
 # Password validation
