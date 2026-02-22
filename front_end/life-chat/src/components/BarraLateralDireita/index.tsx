@@ -48,7 +48,6 @@ const BarraLateralDireita = ({ onAbrirPost }: Props) => {
         <Botao
           onClick={() => {
             onAbrirPost()
-            window.location.reload()
           }}
           className="text-md [&:hover]:text-blue-300"
           aria-label="Configuração"

@@ -106,7 +106,6 @@ const BarraLateral = ({ onAbrirConfig }: Props) => {
           <Botao
             onClick={() => {
               onAbrirConfig()
-              window.location.reload()
             }}
             className="text-md [&:hover]:text-blue-300"
             aria-label="Configuração"

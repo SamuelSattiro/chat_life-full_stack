@@ -192,7 +192,10 @@ const Configure = ({ onClose }: Props) => {
       </div>
       <div className="flex items-center justify-center">
         <Botao
-          onClick={handleSubmit}
+          onClick={() => {
+            handleSubmit()
+            window.location.reload()
+          }}
           className="w-30 relative z-50 mt-6 flex h-12 items-center justify-center rounded-md bg-white/5 p-4 text-white ring-1 ring-white/10 transition-all duration-200 hover:bg-white/10 hover:ring-2 hover:ring-indigo-500 active:scale-[0.96] active:ring-2 active:ring-indigo-500"
         >
           Salvar
