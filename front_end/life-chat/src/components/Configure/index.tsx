@@ -48,6 +48,8 @@ const Configure = ({ onClose }: Props) => {
       })
 
       onClose?.()
+      window.location.reload()
+
     } catch (error: unknown) {
       console.error('ERRO NO SUBMIT:', error)
       if (error && typeof error === 'object' && 'response' in error) {

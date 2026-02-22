@@ -39,6 +39,8 @@ const Post = ({ onClose }: Props) => {
       setConteudo('')
       setImagem(null)
       onClose?.()
+      window.location.reload()
+      
     } catch (error) {
       console.error(error)
       alert('Erro ao criar post')
