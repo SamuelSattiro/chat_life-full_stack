@@ -20,7 +20,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from back_end.users.views import health
+from users.views import health
 
 urlpatterns = [
     path("health/", health),
