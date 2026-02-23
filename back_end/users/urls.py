@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import FeedView, FollowersListView, FollowingListView, ProfileView, PostListCreateView, LoginView, RegisterView, SearchUsersView, change_password, change_username, create_comment, follow_stats, health, list_comments, search_users, toggle_follow, toggle_like
+from .views import FeedView, FollowersListView, FollowingListView, ProfileView, PostListCreateView, LoginView, RegisterView, SearchUsersView, change_password, change_username, create_comment, follow_stats, list_comments, search_users, toggle_follow, toggle_like
 from rest_framework_simplejwt.views import TokenRefreshView
 
 urlpatterns = [
-    path("health/", health),
     path("login/", LoginView.as_view(), name="login"),
     path("register/", RegisterView.as_view(), name="register"),
     path("profile/", ProfileView.as_view(), name="profile"),
