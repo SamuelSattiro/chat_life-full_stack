@@ -10,6 +10,7 @@ from .models import Follow, Like, Post, UserProfile, Comment
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Q
 from rest_framework.decorators import api_view, permission_classes
+from django.http import JsonResponse
 
 User = get_user_model()
 
@@ -292,3 +293,7 @@ def change_password(request):
     request.user.save()
 
     return Response({"success": True})
+
+
+def health(request):
+    return JsonResponse({"status": "ok"})
